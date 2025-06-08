@@ -5,26 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product</title>
 </head>
-<link rel="stylesheet" href="style.css">
-
 <style>
-  body {
+  section {
   background-color: #f5f5f5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+   display: flex;
+  flex-wrap: wrap; /* allows wrapping to new lines */
+  justify-content: center; /* center items horizontally */
+  gap: 20px; /* spacing between boxes */
+  padding: 20px;
 }
 
+
+.navbar {
+  background-color: #34a2eb;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #00ff99;
+}
 
 .product-box {
   width: 250px;
   background-color: #fff;
   padding: 20px;        
   margin: 30px;         
-  border: 2px solid #ccc; 
+  
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
   border-radius: 10px;
+  text-align: center;
 }
 
 .product-img {
@@ -36,12 +67,14 @@
 .product-title {
   font-size: 20px;
   margin-bottom: 10px;
+  
 }
 
 .product-price {
   font-size: 18px;
   color: green;
   margin-bottom: 15px;
+ 
 }
 
 .buy-btn {
@@ -57,12 +90,56 @@
   background-color: #0056b3;
 }
 
+.footer {
+  background-color:#34a2eb;
+  color: #fff;
+  padding: 20px 30px;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer p {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 0;
+}
+
+.footer-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-links li a:hover {
+  color: #ffcc00;
+}
 
 </style>
 
 <body>
-
-  <div class="product-box">
+   <nav class="navbar">
+    <div class="logo">MyShop</div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <section>
+    <div class="product-box">
     <img src="product1.webp" alt="Product Image" class="product-img">
     <h2 class="product-title">Boat Airdops</h2>
     <p class="product-price">&#8377; 999</p>
@@ -98,7 +175,30 @@
     <p class="product-price">&#8377; 2999</p>
     <button class="buy-btn">Buy Now</button>
   </div>
-     
+  <div class="product-box">
+    <img src="product7.avif" alt="Product Image" class="product-img">
+    <h2 class="product-title">S95F OLED 4K Smart TV</h2>
+    <p class="product-price">&#8377; 179990</p>
+    <button class="buy-btn">Buy Now</button>
+  </div>
+  <div class="product-box">
+    <img src="product8.webp" alt="Product Image" class="product-img">
+    <h2 class="product-title">NoiseFit Halo 2 Smartwatch</h2>
+    <p class="product-price">&#8377; 4499</p>
+    <button class="buy-btn">Buy Now</button>
+  </div>
+  </section>
+  <footer class="footer">
+  <div class="footer-content">
+    <p>&copy; 2025 MyShop. All rights reserved.</p>
+    <ul class="footer-links">
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Terms of Service</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </div>
+</footer>
+
 </body>
 
 </html>
